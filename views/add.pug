@@ -1,0 +1,25 @@
+extends layout
+block content
+	h1 Dodawanie 
+	
+	form(method="post" action="/add")
+		label rank: 
+		br
+		input(type="number" name="rank" value='')
+		br
+		label Imie
+		br
+		input(type="text" name="name")
+		br
+		label Nazwisko
+		br
+		input(type="text" name="surname")
+		br
+		label Points
+		br
+		input(type="number" name="points")
+		br
+
+		input(type="submit" value="Dodaj")
+		if message!=''
+			p #{message}

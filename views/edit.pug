@@ -1,0 +1,27 @@
+extends layout
+block content
+	h1 Edycja 
+	form(method="post" action="/edit/"+id)
+		label Id
+		br
+		input(type="number" name="Id" value=Id)
+		br
+		label Rank
+		br
+		input(type="number" name="Rank" value=Rank)
+		br
+		label Imie
+		br
+		input(type="text" name="Name" value=Name)
+		br
+		label Nazwisko
+		br
+		input(type="text" name="Surname" value=Surname)
+		br
+		label Punkty
+		br
+		input(type="number" name="Points" value=Points)
+		br
+		input(type="submit" value="Zmień")
+		if message!=''
+			p #{message}

@@ -1,0 +1,19 @@
+extends layout
+block content
+	h1 Lista
+	table
+		tr
+			th Rank
+			th Imie
+			th Nazwisko
+			th Punkty
+		each chad, index in chessMan
+			tr
+				td=chad.CurentRank
+				td=chad.Name
+				td=chad.Surname
+				td=chad.Points
+				td
+					a(href="/edit/"+chad.id) edytuj
+				td
+					a(href="/delete/"+chad.id) usuń
